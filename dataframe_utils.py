@@ -256,8 +256,6 @@ def target_encoding(
 
         self[col].fillna(global_mean, inplace=True)
         self.drop(columns=col, inplace=True)
-    
-    return self
 
 
 # Method binding functions
