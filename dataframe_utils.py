@@ -256,30 +256,4 @@ def target_encoding(
 
         self[col].fillna(global_mean, inplace=True)
         self.drop(columns=col, inplace=True)
-
-
-# Method binding functions
-def add_summary_method(df: pd.DataFrame) -> None:
-    """Add summary method to DataFrame."""
-    df.summary = MethodType(summary, df)
-
-
-def add_null_values_method(df: pd.DataFrame) -> None:
-    """Add null values visualization method to DataFrame."""
-    df.null_values = MethodType(null_values, df)
-
-
-def add_sin_cos_transformation_method(df: pd.DataFrame) -> None:
-    """Add sinusoidal transformation method to DataFrame."""
-    df.sin_cos_transformation = MethodType(sin_cos_transformation, df)
-
-
-def add_correlation_matrix_method(df: pd.DataFrame) -> None:
-    """Add correlation matrix method to DataFrame."""
-    df.correlation_matrix = MethodType(correlation_matrix, df)
-
-
-def add_target_encoding_method(df: pd.DataFrame) -> None:
-    """Add target encoding method to DataFrame."""
-    df.target_encoding = MethodType(target_encoding, df)
     
